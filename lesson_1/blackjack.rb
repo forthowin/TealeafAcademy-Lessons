@@ -5,6 +5,10 @@ def hand_total(hand)
     total += CARDS[card]
   end
 
+  total = ace_value(hand, total)
+end
+
+def ace_value(hand, total)
   hand.each do |card|
     if card.include?('Ace')
       if total + 10 <= 21
