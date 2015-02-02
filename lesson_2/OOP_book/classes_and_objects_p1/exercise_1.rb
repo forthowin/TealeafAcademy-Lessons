@@ -9,6 +9,10 @@ class MyCar
     @current_speed = 0
   end
 
+  def self.mileage_calc(gallons, miles)
+    miles/gallons
+  end
+
   def speed_up(num)
     @current_speed += num
   end
@@ -30,6 +34,9 @@ class MyCar
     puts "Your new #{color} is cool"
   end
 
+  def to_s
+    "My car is a #{self.color}, #{self.year}, #{self.model}"
+  end
 end
 
 zcar = MyCar.new("2015", "blue", "vtec")
